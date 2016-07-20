@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background-image: url("https://static.pexels.com/photos/57858/pexels-photo-57858.jpeg");
+  margin: 0;
+}
+
+.nav-container {
+  background-color: rgba(36, 21, 8, 0.9);;
+  padding-bottom: 28px;
+  padding-top: 28px;
+}
+
+.button5 {
+  border-radius: 12px;
+  background-color: white;
+  border-color: black;
+  font-size: 30px;
+  font-family: fantasy;
+}
+
+.button5:hover {
+  background-color: gray;
+
+}
+
+h2 {
+  margin-right: 50px;
+  color: black;
+  float: right;
+  font-family: fantasy;
+  font-size: medium;
+}

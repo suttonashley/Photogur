@@ -3,20 +3,20 @@
   <head>
     <title>Photogur</title>
     <%= csrf_meta_tags %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-
-    <%= link_to 'Home', '/' %>
-
+<div class="nav-container">
+    <%= link_to root_path do %><button class="button button5">Home</button><%end%>
     <% if current_user %>
-      Signed in as <%= current_user.username %> | <%= link_to "Logout", '/logout' %>
+     <%=link_to logout_path do%><button class="button button5" style="float: right;">Logout</button><%end%> <%=link_to logout_path do%><button class="button button5" style="float: right;"><h2 style="float: right; text-align: center;"> Hello, <%= current_user.username.upcase %>!</h2></button><%end%>
     <% else%>
-      <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+      <%=link_to signup_path do%><button class="button button5" style="float: right;">Signup</button><%end%> <%=link_to login_path do%><button class="button button5" style="float: right;">Login</button> <%end%>
     <% end %>
+</div>
 
     <%= yield %>
   </body>
