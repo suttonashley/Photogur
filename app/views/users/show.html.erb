@@ -5,20 +5,17 @@
   <%= @user.username %>
 </p>
 
+<%= render "pictures/form", locals:{ picture: @picture }%>
 <p>
-  <strong>Email:</strong>
-  <%= @user.email %>
+  <strong>Photos:</strong>
+  <% @user.pictures.each do |photo| %>
+    <%= image_tag photo.url %>
+  <% end %>
 </p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
 
-<p>
-  <strong>Password Confirmation:</strong>
-  <%= @user.password_confirmation %>
-</p>
+
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

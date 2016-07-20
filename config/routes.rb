@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'sessions_controller/create'
+  get 'sessions/create'
 
   resources :users
   resources :pictures
@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#login'
   get '/logout' => 'sessions#logout'
+
+
+  # get '/pictures/:id' => 'pictures#show'
 
 
 

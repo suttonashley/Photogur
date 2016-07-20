@@ -1,15 +1,20 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authorize, only: [:show, :edit, :update, :destroy]
+  before_action :user_authorization, only: [:show, :new]
   # GET /users
   # GET /users.json
   def index
+    unless current_user.admin?
+      redirect_to root_path
+    end
     @users = User.all
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    @picture = Picture.new
   end
 
   # GET /users/new
@@ -63,6 +68,7 @@ class UsersController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
