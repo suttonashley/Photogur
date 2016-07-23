@@ -9,14 +9,16 @@
   </head>
 
   <body>
-<div class="nav-container">
-    <%= link_to root_path do %><button class="button button5">Home</button><%end%>
-    <% if current_user %>
-     <%=link_to logout_path do%><button class="button button5" style="float: right;">Logout</button><%end%> <%=link_to logout_path do%><button class="button button5" style="float: right;"><h2 style="float: right; text-align: center;"> Hello, <%= current_user.username.upcase %>!</h2></button><%end%>
-    <% else%>
-      <%=link_to signup_path do%><button class="button button5" style="float: right;">Signup</button><%end%> <%=link_to login_path do%><button class="button button5" style="float: right;">Login</button> <%end%>
-    <% end %>
-</div>
+
+
+    <div class="nav-container">
+        <%= link_to root_path do %><button class="button button5">Home</button><%end%>
+        <% if current_user %>
+         <%=link_to logout_path do%><button class="button button5" style="float: right;">Logout</button><%end%> <%=link_to current_user do%><button class="button button5" style="float: right;"><h2 style="float: right;"> Hello, <%= current_user.username.upcase %>!</h2></button><%end%>
+        <% else%>
+          <%=link_to signup_path do%><button class="button button5" style="float: right;">Signup</button><%end%> <%=link_to login_path do%><button class="button button5" style="float: right;">Login</button> <%end%>
+        <% end %>
+    </div>
 
     <%= yield %>
   </body>

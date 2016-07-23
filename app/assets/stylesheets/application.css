@@ -14,12 +14,12 @@
  *= require_self
  */
 body {
-  background-image: url("https://static.pexels.com/photos/57858/pexels-photo-57858.jpeg");
+  background-color: rgb(209, 219, 221);;
   margin: 0;
 }
 
 .nav-container {
-  background-color: rgba(36, 21, 8, 0.9);;
+  background-color: rgba(255, 255, 255, 0.5);
   padding-bottom: 28px;
   padding-top: 28px;
 }

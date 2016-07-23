@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#logout'
 
 
-  # get '/pictures/:id' => 'pictures#show'
+  get '/pictures/:id' => 'pictures#show'
 
 
 

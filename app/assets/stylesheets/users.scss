@@ -1,3 +1,32 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.image_resize{
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.upload-title{
+  font-family: fantasy;
+  font-size: 24pt;
+}
+
+.upload-form{
+  text-align: center;
+  margin-top: 5%;
+}
+
+.upload-box{
+  width: 30%;
+  font-size: 24pt;
+  border-color: black;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}

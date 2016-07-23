@@ -13,3 +13,20 @@
 
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'Back', pictures_path %>
+
+
+
+<div id="link-codes">
+  <h3>Image Direct Link (email &amp; IM)</h3>
+        <p>
+          <%= @picture.url %>
+        </p>
+  <h3>HTML (website / blogs)</h3>
+        <p>
+          &lt;a href="<%=@picture.url%>"&gt; &lt;img src="<%=@picture.url%>"&gt;&lt;/a&gt;
+        </p>
+  <h3>Markdown Link (reddit comments)</h3>
+      <p>
+        [url=<%=@picture.url%>][img]http://i.imgur.com/Q9jmMtl.jpg[/img][/url]
+      </p>
+</div>

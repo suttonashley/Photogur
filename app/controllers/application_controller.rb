@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
   end
 
   def user_authorization
+    p "current_user: ***********"
+    p current_user
+    p "@user: ********"
+    p @user
     redirect_to root_path unless current_user == @user
   end
 
